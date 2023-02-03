@@ -576,10 +576,11 @@
 				"type": "ScheduleTrigger",
 				"typeProperties": {
 					"recurrence": {
-						"frequency": "Minute",
-						"interval": 15,
+						"frequency": "Day",
+						"interval": 1,
 						"startTime": "2023-02-01T23:29:00",
-						"timeZone": "Eastern Standard Time"
+						"timeZone": "Eastern Standard Time",
+						"schedule": {}
 					}
 				}
 			},
