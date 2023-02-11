@@ -754,7 +754,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"annotations": [],
-				"runtimeState": "Started",
+				"runtimeState": "Stopped",
 				"pipelines": [
 					{
 						"pipelineReference": {
@@ -767,10 +767,11 @@
 				"type": "ScheduleTrigger",
 				"typeProperties": {
 					"recurrence": {
-						"frequency": "Day",
-						"interval": 1,
+						"frequency": "Month",
+						"interval": 6,
 						"startTime": "2023-02-01T23:29:00",
-						"timeZone": "Eastern Standard Time"
+						"timeZone": "Eastern Standard Time",
+						"schedule": {}
 					}
 				}
 			},
@@ -784,7 +785,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"annotations": [],
-				"runtimeState": "Started",
+				"runtimeState": "Stopped",
 				"pipelines": [
 					{
 						"pipelineReference": {
