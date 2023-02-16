@@ -15,6 +15,18 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'ls_adls_covidreportingdl'"
 		},
+		"ls_hdinsights_sa_clusterPassword": {
+			"type": "secureString",
+			"metadata": "Secure string for 'clusterPassword' of 'ls_hdinsights_sa'"
+		},
+		"ls_hdinsights_sa_clusterSshPassword": {
+			"type": "secureString",
+			"metadata": "Secure string for 'clusterSshPassword' of 'ls_hdinsights_sa'"
+		},
+		"ls_hdinsights_sa_servicePrincipalKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'servicePrincipalKey' of 'ls_hdinsights_sa'"
+		},
 		"ls_adls_covidreportingdl_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://covidreportingusingdlk.dfs.core.windows.net/"
@@ -26,6 +38,22 @@
 		"tr_ingest_population_data_properties_typeProperties_scope": {
 			"type": "string",
 			"defaultValue": "/subscriptions/3eb62540-3ce3-4e50-97e3-6964d79886be/resourceGroups/covid-reporting-rg/providers/Microsoft.Storage/storageAccounts/covidreportusingadf"
+		},
+		"ls_hdinsights_sa_properties_typeProperties_hostSubscriptionId": {
+			"type": "string",
+			"defaultValue": "3eb62540-3ce3-4e50-97e3-6964d79886be"
+		},
+		"ls_hdinsights_sa_properties_typeProperties_clusterResourceGroup": {
+			"type": "string",
+			"defaultValue": "covid-reporting-rg"
+		},
+		"ls_hdinsights_sa_properties_typeProperties_servicePrincipalId": {
+			"type": "string",
+			"defaultValue": "sh_nall@live.concordia.ca"
+		},
+		"ls_hdinsights_sa_properties_typeProperties_tenant": {
+			"type": "string",
+			"defaultValue": "5569f185-d22f-4e13-9850-ce5b1abcd2e8"
 		},
 		"containerUri": {
 			"type": "string",
@@ -60,11 +88,32 @@
 					"ls_adls_covidreportingdl_accountKey": {
 						"value": "[parameters('ls_adls_covidreportingdl_accountKey')]"
 					},
+					"ls_hdinsights_sa_clusterPassword": {
+						"value": "[parameters('ls_hdinsights_sa_clusterPassword')]"
+					},
+					"ls_hdinsights_sa_clusterSshPassword": {
+						"value": "[parameters('ls_hdinsights_sa_clusterSshPassword')]"
+					},
+					"ls_hdinsights_sa_servicePrincipalKey": {
+						"value": "[parameters('ls_hdinsights_sa_servicePrincipalKey')]"
+					},
 					"ls_adls_covidreportingdl_properties_typeProperties_url": {
 						"value": "[parameters('ls_adls_covidreportingdl_properties_typeProperties_url')]"
 					},
 					"ls_http_opendata_ecdc_europe_eu_properties_typeProperties_url": {
 						"value": "[parameters('ls_http_opendata_ecdc_europe_eu_properties_typeProperties_url')]"
+					},
+					"ls_hdinsights_sa_properties_typeProperties_hostSubscriptionId": {
+						"value": "[parameters('ls_hdinsights_sa_properties_typeProperties_hostSubscriptionId')]"
+					},
+					"ls_hdinsights_sa_properties_typeProperties_clusterResourceGroup": {
+						"value": "[parameters('ls_hdinsights_sa_properties_typeProperties_clusterResourceGroup')]"
+					},
+					"ls_hdinsights_sa_properties_typeProperties_servicePrincipalId": {
+						"value": "[parameters('ls_hdinsights_sa_properties_typeProperties_servicePrincipalId')]"
+					},
+					"ls_hdinsights_sa_properties_typeProperties_tenant": {
+						"value": "[parameters('ls_hdinsights_sa_properties_typeProperties_tenant')]"
 					}
 				}
 			},

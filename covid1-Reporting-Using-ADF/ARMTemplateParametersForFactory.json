@@ -11,6 +11,15 @@
 		"ls_adls_covidreportingdl_accountKey": {
 			"value": ""
 		},
+		"ls_hdinsights_sa_clusterPassword": {
+			"value": ""
+		},
+		"ls_hdinsights_sa_clusterSshPassword": {
+			"value": ""
+		},
+		"ls_hdinsights_sa_servicePrincipalKey": {
+			"value": ""
+		},
 		"ls_adls_covidreportingdl_properties_typeProperties_url": {
 			"value": "https://covidreportingusingdlk.dfs.core.windows.net/"
 		},
@@ -19,6 +28,18 @@
 		},
 		"tr_ingest_population_data_properties_typeProperties_scope": {
 			"value": "/subscriptions/3eb62540-3ce3-4e50-97e3-6964d79886be/resourceGroups/covid-reporting-rg/providers/Microsoft.Storage/storageAccounts/covidreportusingadf"
+		},
+		"ls_hdinsights_sa_properties_typeProperties_hostSubscriptionId": {
+			"value": "3eb62540-3ce3-4e50-97e3-6964d79886be"
+		},
+		"ls_hdinsights_sa_properties_typeProperties_clusterResourceGroup": {
+			"value": "covid-reporting-rg"
+		},
+		"ls_hdinsights_sa_properties_typeProperties_servicePrincipalId": {
+			"value": "sh_nall@live.concordia.ca"
+		},
+		"ls_hdinsights_sa_properties_typeProperties_tenant": {
+			"value": "5569f185-d22f-4e13-9850-ce5b1abcd2e8"
 		}
 	}
 }
