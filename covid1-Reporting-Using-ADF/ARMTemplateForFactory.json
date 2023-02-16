@@ -395,6 +395,7 @@
 					"location": {
 						"type": "AzureBlobFSLocation",
 						"fileName": "country_lookup.csv",
+						"folderPath": "country_lookup",
 						"fileSystem": "lookup"
 					},
 					"columnDelimiter": ",",
@@ -647,7 +648,7 @@
 					"location": {
 						"type": "AzureBlobFSLocation",
 						"fileName": "cases_deaths.csv",
-						"folderPath": "ecdc",
+						"folderPath": "ecdc/cases_deaths",
 						"fileSystem": "raw"
 					},
 					"columnDelimiter": ",",
@@ -1121,7 +1122,7 @@
 						"     skipDuplicateMapOutputs: true) ~> SelectRequiredFields2",
 						"SelectRequiredFields2 split(indicator == 'Weekly new hospital admissions per 100k' || indicator == 'Weekly new ICU admissions per 100k',",
 						"     disjoint: false) ~> DailyWeeklySplit@(Weekly, Daily)",
-						"DimDateSource aggregate(groupBy(ecdc_Year_Week = year + '-W' + lpad(week_of_year,2,'0')),",
+						"DimDateSource aggregate(groupBy(ecdc_Year_Week = year+'-W'+lpad(week_of_year,2,'0')),",
 						"     week_start_date = min(date),",
 						"          week_end_date = max(date)) ~> AggDimDate",
 						"DailyWeeklySplit@Weekly, AggDimDate join(reported_year_week == ecdc_Year_Week,",
@@ -1221,7 +1222,7 @@
 					"location": {
 						"type": "AzureBlobFSLocation",
 						"fileName": "hospital_admissions.csv",
-						"folderPath": "ecdc",
+						"folderPath": "ecdc/hospital_admissions",
 						"fileSystem": "raw"
 					},
 					"columnDelimiter": ",",
@@ -1279,6 +1280,7 @@
 					"location": {
 						"type": "AzureBlobFSLocation",
 						"fileName": "dim_date.csv",
+						"folderPath": "dim_date",
 						"fileSystem": "lookup"
 					},
 					"columnDelimiter": ",",
